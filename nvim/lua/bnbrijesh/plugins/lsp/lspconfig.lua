@@ -107,6 +107,11 @@ return {
 					filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
 				})
 			end,
+			["groovyls"] = function()
+				lspconfig["groovyls"].setup({
+					cmd = { "java", "-jar", "/Library/groovy-language-server-all.jar" },
+				})
+			end,
 			["emmet_ls"] = function()
 				-- configure emmet language server
 				lspconfig["emmet_ls"].setup({
